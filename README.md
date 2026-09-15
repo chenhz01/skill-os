@@ -37,6 +37,19 @@ python tools/skill_os.py audit <evidence_file>      # all boxes ticked?
 - **NEEDS-EVIDENCE** — structure fine, but no fully-ticked evidence run. Don't claim done.
 - **SHIP-READY** — lint pass + latest evidence run fully ticked + grade A/B.
 
+## First external audit
+
+**[obra/superpowers](https://github.com/obra/superpowers)** — a popular real-world skill collection, audited with `sweep` on 2026-09-16 (snapshot `b36e0829c6d0`, full coverage 14/14, no sampling):
+
+| Check | Result |
+|---|---|
+| lint (structure) | **14/14 pass** |
+| evidence (audit runs) | **0/14** fully audited |
+| scorecard grades | A=0 · B=12 · C=2 · D=0 |
+| verdicts | NEEDS-EVIDENCE=14 · BLOCKED=0 |
+
+Honest reading: superpowers is structurally clean — every skill lints, nothing blocked, nothing graded D. The two C grades (`brainstorming`, `subagent-driven-development`) bundle a `scripts/` directory without a license file or SPEC. And none of the 14 carries per-run evidence — exactly the gap this assembly line exists to close: a clean-looking skill and an *audited* skill are not the same thing.
+
 ## Tool discovery
 
 skill_os.py looks for the four tool files beside itself (sibling repos layout) or
