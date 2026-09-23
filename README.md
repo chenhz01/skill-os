@@ -1,5 +1,26 @@
 # skill-os
 
+> **Turn prompt folders into falsifiable, versioned contracts your CI can enforce**
+
+skill 纪律层：SPEC 模板 + 证据流水线 + Prompt-as-Source 模式治理（吸收 skill-spec / agentsrc）
+
+## Install (one line)
+```bash
+git clone https://github.com/chenhz01/skill-os
+```
+
+## Why not X?
+| | skill-os | 裸提示词文件夹 |
+|---|---|---|
+| 契约 | SPEC 六节+版本化 | 无 |
+| 可审计 | evidence 流水线 | 无 |
+
+Topics: `agent-skills` · `spec` · `ci` · `prompt-engineering` · `zero-dependency`
+
+---
+
+# skill-os
+
 > **Part of the Evidence-first Agents suite** — tooling that makes AI agents
 > accountable instead of just capable: [answer-contract](https://github.com/chenhz01/answer-contract)
 > (output discipline) · [skill-spec](https://github.com/chenhz01/skill-spec)
